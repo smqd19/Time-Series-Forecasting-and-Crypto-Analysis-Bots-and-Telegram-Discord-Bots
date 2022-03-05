@@ -1,0 +1,298 @@
+{% load \static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="{% static '/website/sass/start.scss' %}"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/website/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static '/website/sass/main.scss' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/website/css/font-awesome.min.css' %}"
+    />
+    <script src="{% static '/website/jquery.min.js' %}"></script>
+    <title>Bitcoin Exchange</title>
+  </head>
+
+  <body>
+    <nav class="top-nav navigation" id="top-nav">
+      <div class="navigation__logos">
+        <img src="{% static '/website/img/cryptocurrency.svg' %}" alt="Bitcoin logo"/>
+        <h1>Bitcoin Exchange</h1>
+      </div>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#features">Features</a></li>
+      
+      </ul>
+    </nav>
+
+    <!-- <nav class="navigation" id="navbar">
+      <div class="navigation__logo">
+        <img src="img/cryptocurrency.svg" alt="Bitcoin logo" />
+        <h1>Bitcoin Exchange</h1>
+      </div>
+
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <ul class="navigation__bar">
+        <li class="navigation__bar-item">
+          <a href="#services" class="navigation__bar-link">Services</a>
+        </li>
+        <li class="navigation__bar-item">
+          <a href="#features" class="navigation__bar-link">Features</a>
+        </li>
+        <li class="navigation__bar-item">
+          <a href="#demo" class="navigation__bar-link">Demo</a>
+        </li>
+        <li class="navigation__bar-item">
+          <a href="#trade" class="navigation__bar-link">How to trade</a>
+        </li>
+        <li class="navigation__bar-item">
+          <a href="#contact" class="navigation__bar-link">Contact us</a>
+        </li>
+      </ul> 
+    </nav> -->
+    <header class="header" id="home">
+      <h1 class="heading-1 animate__animated animate__bounce">
+        Welcome to Bitcoin Exchange
+      </h1>
+      <div class="header__button">
+        <a href="#" class="header__button-right">Read more</a>
+      </div>
+    </header>
+    <section class="services" id="services">
+      <h1>Services</h1>
+      <div class="services__part">
+        <img src="{% static '/website/img/stats.svg' %}" alt="Business" />
+        <h3>Business Integration</h3>
+        <p>Using cryptocurrencies to lower costs and open markets.</p>
+      </div>
+      <div class="services__part">
+        <img src="{% static '/website/img/study.svg' %}" alt="Personal use" />
+        <h3>Personal use</h3>
+        <p>
+          How to purchase and store crypto with minimal costs and risk. Best
+          practices for storage.
+        </p>
+      </div>
+      <div class="services__part">
+        <img src="{% static '/website/img/database.svg' %}" all="Blockchain applications" />
+        <h3>Blockchain applications</h3>
+        <p>
+          How to laverage an immutable database for time stamps, supply chain
+          tracking, provably fair voting and more.
+        </p>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <q
+            >I would be long bitcoin, and neutral to skeptical of just about
+            everything else at this point with a few possible exceptions.</q
+          >
+          <div class="img">
+            <img src="{% static '/website/img/Thiel.jpg' %}" alt="Peter Thiel" />
+          </div>
+          <p class="author">Peter Thiel</p>
+        </div>
+
+        <div class="mySlides">
+          <q
+            >Bitcoin is the beginning of something great: A currency without a
+            goverment, something nessesary and imperative.</q
+          >
+          <div class="img">
+            <img src="{% static '/website/img/Taleb.jpg' %}" alt="Peter Thiel" />
+          </div>
+          <p class="author">Nassim Taleb</p>
+        </div>
+
+        <div class="mySlides">
+          <q
+            >Bitcoin is remarkable cryptographic achievement and the ability to
+            create something that is not duplicate in the digital world has
+            enormous value.</q
+          >
+          <div class="img">
+            <img src="{% static '/website/img/Schmidt.jpg' %}" alt="Peter Thiel" />
+          </div>
+          <p class="author">Eric Schmidt</p>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+    <section class="features" id="features">
+      <div class="features__content">
+        <img src="{% static '/website/img/assets.svg' %}" alt="dsa" />
+        <h3>Easy investing</h3>
+        <p>
+          Just with few clicks you can invest in dynamic portfolio of exclusive
+          cryptocurrencies.
+        </p>
+      </div>
+      <div class="features__content">
+        <img src="{% static '/website/img/risk.svg' %}" alt="dsa" />
+        <h3>Minimal risk</h3>
+        <p>
+          Your portfolio is design so it can track the whole market cap and not
+          rely solely on individual cryptocurrencies.
+        </p>
+      </div>
+      <div class="features__content">
+        <img src="{% static '/website/img/folders.svg' %}" alt="dsa" />
+        <h3>Direct ownership</h3>
+        <p>
+          You always own your cryptocurrencies directly, not through collective
+          investments.
+        </p>
+      </div>
+      <div class="features__content">
+        <img src="{% static '/website/img/audit.svg' %}" alt="dsa" />
+        <h3>Independent audit</h3>
+        <p>
+          We are the first platform for investing to cryptocurrencies with
+          independent audit of wallets.
+        </p>
+      </div>
+      <div class="features__content">
+        <img src="{% static '/website/img/paypal.svg' %}" alt="dsa" />
+        <h3>PayPal deposit</h3>
+        <p>You can make a deposit via PayPal, credit card or bank transfer.</p>
+      </div>
+      <div class="features__content">
+        <img src="{% static '/website/img/money-bag.svg' %}" alt="dsa" />
+        <h3>Invest small</h3>
+        <p>Start investing from just 50€.</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-item">
+        <div class="footer__offer">
+          <ul>
+            <li><span>Offer</span></li>
+            <li>Markets</li>
+            <li>Info about accounts</li>
+            <li>Xopenhub.pro</li>
+          </ul>
+        </div>
+
+        <div class="footer__platforms">
+          <ul>
+            <li><span>Trading platforms</span></li>
+            <li>xStation5</li>
+            <li>xStation Mobile/li></li>
+            <li>MT 4</li>
+          </ul>
+        </div>
+
+        <div class="footer__analysis">
+          <ul>
+            <li><span>Market analysis</span></li>
+            <li>Markets reports</li>
+            <li>Price overview</li>
+            <li>Calendar</li>
+          </ul>
+        </div>
+
+        <div class="footer__academy">
+          <ul>
+            <li><span>Academy</span></li>
+            <li>Overview</li>
+            <li>Trading guide</li>
+            <li>Online webinar</li>
+          </ul>
+        </div>
+
+        <div class="footer__about">
+          <ul>
+            <li><span>Bitcoin Exchange</span></li>
+            <li>About us</li>
+            <li>Careers</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+
+        <div class="footer__relationships">
+          <ul>
+            <li><span>Relationships with investors</span></li>
+            <li>News</li>
+            <li>Reports</li>
+            <li>Stock prices</li>
+          </ul>
+        </div>
+
+        <div class="footer__terms">
+          <ul>
+            <li><span>Terms & conditions</span></li>
+            <li>Important documents</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border"></div>
+      <p>
+        CFDs are complex instruments and come with a high risk of losing money
+        rapidly due to leverage. 75% of retail investor accounts lose money when
+        trading CFDs with this provider. You should consider whether you
+        understand how CFDs work, and whether you can afford to take the high
+        risk of losing your money.
+      </p>
+      <p>
+        Bitcoin Exchange (Europe) Ltd., a Financial Services Company authorised
+        and regulated by the Cyprus Securities Exchange Commission (CySEC) under
+        the license # 109/10. Bitcoin Exchange (UK) Ltd, a Financial Services
+        Company authorised and regulated by the Financial Conduct Authority
+        (FCA) under the license FRN 583263. Bitcoin Exchange AUS Capital Pty
+        Ltd. is authorised by the Australian Securities and Investments
+        Commission (ASIC) to provide financial services under Australian
+        Financial Services License 491139.
+      </p>
+      <p>
+        Past performance is not an indication of future results. General Risk
+        Disclosure | Terms & Conditions
+      </p>
+      <p>
+        Trading with Bitcoin Exchange by following and/or copying or replicating
+        the trades of other traders involves a high level of risks, even when
+        following and/or copying or replicating the top-performing traders. Such
+        risks includes the risk that you may be following/copying the trading
+        decisions of possibly inexperienced/unprofessional traders, or traders
+        whose ultimate purpose or intention, or financial status may differ from
+        yours. Past performance of an Bitcoin Exchange Community Member is not a
+        reliable indicator of his future performance. Content on Bitcoin
+        Exchange social trading platform is generated by members of its
+        community and does not contain advice or recommendations by or on behalf
+        of eToro - Your Social Investment Network. Copyright © 2006-2020 Bitcoin
+        Exchange - Your Social Investment Network, All rights reserved.
+      </p>
+    </footer>
+    <script type="text/javascript" src="{% static '/website/script.js' %}"></script>
+  </body>
+</html>
